@@ -10,7 +10,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import NavbarQucikAction from "./Navbar";
 import { FaAngleDown } from "react-icons/fa";
 import {getallProducts,} from '../API/productAPI'
-import {socialIcon,socialIcon1} from './data'
+import {socialiconsentiment} from './data'
 
 import FollowerStats from "./TopSummaryStats/FollowerStats";
 import SentimentsScoreStats from "./TopSummaryStats/SentimentsScoreStats";
@@ -228,7 +228,7 @@ const AdminDash = () => {
               </div>
             </div>
 
-{/* Top Summary Stats   starts here */}
+            {/* Top Summary Stats   starts here */}
             <div className="w-full  lg:px-12">
               <div className="mx-auto max-w-2xl px-4 py-4 sm:px-6  lg:max-w-7xl lg:px-8">
                 <h1 className="text-center text-green-700 text-lg font-bold pb-2">
@@ -249,28 +249,51 @@ const AdminDash = () => {
 
                   {/* Social media sentimental timeline Stats  starts here*/}
                   <div className="sm:col-span-2 h-64">
-                    <SocialMediaSentimentalTimeline/>
+                    <SocialMediaSentimentalTimeline />
                   </div>
                   {/* Social media sentimental timeline Stats  ends here*/}
 
-                  <div className="sm:col-span-2 sm:col-start-1 h-64">
-                    <SentimentcategoryTimeline/>
+                  {/* <div className="sm:col-span-2 sm:col-start-1 h-64">
+                    <SentimentcategoryTimeline />
                   </div>
 
                   <div className="sm:col-span-2 sm:col-start h-64">
-                    <SocialMediaSentimentalTimeline/>
+                    <SocialMediaSentimentalTimeline />
                   </div>
 
                   <div className="sm:col-span-2 sm:col-start h-64">
-                    <SocialMediaSentimentalTimeline/>
+                    <SocialMediaSentimentalTimeline />
+                  </div> */}
+                </div>
+
+                <div className="mt-4 flex gap-2">
+                  <div className="w-8 bg-white mt-6 ring-1 ring-black">
+                    <ul className=" py-2">
+                        {socialiconsentiment.map(item=>
+                        <>
+                        <div className="w-full hover:bg-green-500 flex flex-col items-center cursor-pointer rounded-md"><li className="w-6 h-6 my-2 ">{item.icon}</li></div>
+                        </>)}
+                    </ul>
+                  </div>
+                  <div className="flex-1">
+                    {" "}
+                    <div className="py-6 grid grid-cols-1 sm:grid-cols-6 gap-4 ">
+                      <div className="sm:col-span-2 sm:col-start-1 h-64">
+                        <SentimentcategoryTimeline />
+                      </div>
+                      <div className="sm:col-span-2 sm:col-start h-64">
+                        <SocialMediaSentimentalTimeline />
+                      </div>
+
+                      <div className="sm:col-span-2 sm:col-start h-64">
+                        <SocialMediaSentimentalTimeline />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-
             </div>
-{/* Top Summary Stats   Ends here */}
-
+            {/* Top Summary Stats   Ends here */}
           </div>
         </div>
       </main>
