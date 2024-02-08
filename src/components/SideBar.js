@@ -16,6 +16,7 @@ import FollowerStats from "./TopSummaryStats/FollowerStats";
 import SentimentsScoreStats from "./TopSummaryStats/SentimentsScoreStats";
 import SocialMediaSentimentalTimeline from "./TopSummaryStats/SocialmediaSentimentalTimeline";
 import SentimentcategoryTimeline from "./TopSummaryStats/SentimentcategoryTimeline";
+import ScatterLinePlot from "./charts/ScatterLinePlot ";
 
 const AdminDash = () => {
   const menus = [
@@ -73,7 +74,7 @@ const AdminDash = () => {
     <section className="flex ">
       {/* Sidebar starts here*/}
       <div
-        className={`bg-[#0e0e0e] min-h-screen sticky  ${
+        className={`bg-[#0e0e0e] min-h-screen    ${
           open ? "w-48" : "w-16"
         } duration-500 text-gray-100 px-4`}
       >
@@ -123,7 +124,7 @@ const AdminDash = () => {
         </div>
       </div>
 
-      <main className="flex-1">
+      <main className="flex-1  ">
         <div className="flex flex-col overflow-y-auto">
           <NavbarQucikAction />
           {/* Showing analysis nav2 starts here */}
@@ -251,22 +252,10 @@ const AdminDash = () => {
                   <div className="sm:col-span-2 h-64">
                     <SocialMediaSentimentalTimeline />
                   </div>
-                  {/* Social media sentimental timeline Stats  ends here*/}
-
-                  {/* <div className="sm:col-span-2 sm:col-start-1 h-64">
-                    <SentimentcategoryTimeline />
-                  </div>
-
-                  <div className="sm:col-span-2 sm:col-start h-64">
-                    <SocialMediaSentimentalTimeline />
-                  </div>
-
-                  <div className="sm:col-span-2 sm:col-start h-64">
-                    <SocialMediaSentimentalTimeline />
-                  </div> */}
                 </div>
+              </div>
 
-                <div className="mt-4 flex gap-2">
+              <div className="mt-4 flex gap-2">
                   <div className="w-8 bg-white mt-6 ring-1 ring-black">
                     <ul className=" py-2">
                         {socialiconsentiment.map(item=>
@@ -286,12 +275,11 @@ const AdminDash = () => {
                       </div>
 
                       <div className="sm:col-span-2 sm:col-start h-64">
-                        <SocialMediaSentimentalTimeline />
+                        <ScatterLinePlot />
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
             {/* Top Summary Stats   Ends here */}
           </div>

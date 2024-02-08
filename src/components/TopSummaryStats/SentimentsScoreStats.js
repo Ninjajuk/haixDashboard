@@ -1,4 +1,6 @@
+import SingleLineGraph from '../charts/SingleLinegraph';
 import {socialIcon,socialIcon1} from '../data'
+const userrating = 80;
 function SentimentsScoreStats(){
     return (
       <>
@@ -13,11 +15,14 @@ function SentimentsScoreStats(){
                 {socialIcon1
                   .filter((item) => item.title !== "Facebook")
                   .map((item, index) => (
-                    <li key={index} className="flex flex-col px-4 py-2">
-                      <span className={`w-10 h-10 ${item.color}`}>
+                    <li key={index} className="flex items-center  px-4 py-2">
+                      <div className={`w-10 h-10 ${item.color}`}>
                         {item.icon}
-                      </span>
-                      {/* <span><XAxisOnlyGraph/></span> */}
+                      </div>
+                        <div className=" bg-gray-100 text-center text-white">
+                          <div className="ml-2 w-60 h-4 bg-green-500"></div>
+                        </div>
+
                     </li>
                   ))}
               </ul>
