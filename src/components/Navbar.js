@@ -11,7 +11,7 @@ function classNames(...classes) {
 
 export default function NavbarQucikAction() {
   return (
-    <Disclosure as="nav" className="bg-white shadow m-0">
+    <Disclosure as="nav" className="bg-white shadow m-0 sticky top-0 z-10">
       {({ open }) => (
         <>
           <div className="hidden lg:block mx-auto mw-full px-4 sm:px-6 lg:px-8">
