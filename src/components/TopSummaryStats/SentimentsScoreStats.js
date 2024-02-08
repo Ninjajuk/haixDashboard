@@ -20,7 +20,7 @@ function SentimentsScoreStats(){
                         {item.icon}
                       </div>
                         <div className=" bg-gray-100 text-center text-white">
-                          <div className="ml-2 w-60 h-4 bg-green-500"></div>
+                          <div className={`ml-2  h-2 bg-green-500 rounded-full shadow-md ${item.width}`}></div>
                         </div>
 
                     </li>
